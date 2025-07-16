@@ -1,0 +1,15 @@
+poly\fashion\util\XAuth.class
+poly\fashion\util\XQuery.class
+poly\fashion\ui\manager\NewClass.class
+poly\fashion\util\XStr.class
+poly\fashion\util\XDialog.class
+poly\fashion\util\XJdbc.class
+poly\fashion\dao\NewClass.class
+poly\fashion\entity\User$UserBuilder.class
+poly\fashion\dao\impl\NewClass.class
+poly\fashion\util\TimeRange.class
+poly\fashion\util\XIcon.class
+poly\fashion\PolyFashion.class
+poly\fashion\icons\NewClass.class
+poly\fashion\ui\NewClass.class
+poly\fashion\entity\User.class
