@@ -6,8 +6,8 @@ package poly.fashion.ui;
 
 /**
  *
- * @author Admin
+ * @author THIS PC
  */
-public class NewClass {
+public class PolyFashionController {
     
 }
