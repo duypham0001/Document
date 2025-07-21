@@ -1,4 +1,4 @@
-package poly.fashion.dao.dao;
+package poly.fashion.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
