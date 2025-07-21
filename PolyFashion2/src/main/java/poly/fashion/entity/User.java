@@ -1,24 +1,20 @@
 package poly.fashion.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Data
 public class User {
-    private Integer maUser;
-    private String hoTen;
-    private String email;
-    private String soDienThoai;
-    private String diaChi;
-    private Integer maTK;
-
-    // Thêm các trường dưới đây để phù hợp với XAuth.java
     private String username;
     private String password;
-    private Boolean enabled;
-    private Boolean manager;
+    private boolean enabled;
     private String fullname;
-    private String photo;
+    @Builder.Default
+    private String photo = "photo.png";
+    private boolean manager;
 }
