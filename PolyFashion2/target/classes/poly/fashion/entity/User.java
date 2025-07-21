@@ -1,16 +1,20 @@
 package poly.fashion.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Data
 public class User {
-    private Integer maUser;
-    private String hoTen;
-    private String email;
-    private String soDienThoai;
-    private String diaChi;
-    private Integer maTK;
+    private String username;
+    private String password;
+    private boolean enabled;
+    private String fullname;
+    @Builder.Default
+    private String photo = "photo.png";
+    private boolean manager;
 }
