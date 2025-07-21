@@ -4,12 +4,30 @@
  */
 package poly.fashion.dao;
 
-import javax.smartcardio.Card;
 
 /**
  *
  * @author Admin
  */
-public interface DoanhThuDAO extends CrudDAO<Card, Integer>{
-    
+import java.util.Date;
+import java.util.List;
+import poly.fashion.entity.DoanhThu;
+
+public interface DoanhThuDAO{
+    /**
+     * Truy vấn doanh thu từng loại theo khoảng thời gian
+     * 
+     * @param begin thời gian bắt đầu
+     * @param end thời gian kết thúc
+     * @return kết quả truy vấn
+     */
+    List<DoanhThu.BySanPham> getBySanPham(Date begin, Date end);
+    /**
+     * Truy vấn doanh thu từng nhân viên theo khoảng thời gian
+     * 
+     * @param begin thời gian bắt đầu
+     * @param end thời gian kết thúc
+     * @return kết quả truy vấn
+     */
+    List<DoanhThu.ByUser> getByUser(Date begin, Date end);
 }

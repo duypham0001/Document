@@ -1,15 +1,21 @@
 package poly.fashion.entity;
 
-import lombok.*;
 
-@AllArgsConstructor
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Data
 public class SanPham {
-    private Integer maSP;
-    private String tenSP;
-    private String moTa;
-    private java.math.BigDecimal gia;
-    private Integer soLuong;
+    private String id;
+    private String name;
+
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }

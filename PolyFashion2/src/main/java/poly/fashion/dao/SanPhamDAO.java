@@ -4,12 +4,12 @@
  */
 package poly.fashion.dao;
 
-import javax.smartcardio.Card;
+import poly.fashion.entity.SanPham;
 
 /**
  *
  * @author Admin
  */
-public interface SanPhamDAO extends CrudDAO<Card, Integer> {
+public interface SanPhamDAO extends CrudDAO<SanPham, String> {
     
 }
