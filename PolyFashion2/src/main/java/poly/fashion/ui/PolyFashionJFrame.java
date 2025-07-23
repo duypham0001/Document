@@ -19,7 +19,7 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
     public PolyFashionJFrame() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -241,7 +241,7 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
 
     private void btnLichSuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLichSuActionPerformed
         // TODO add your handling code here:
-
+        this.showLichSuJDialog(this);
     }//GEN-LAST:event_btnLichSuActionPerformed
 
     private void btnChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangePasswordActionPerformed
@@ -256,6 +256,7 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
 
     private void btnDoanhThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoanhThuActionPerformed
         // TODO add your handling code here:
+        this.showBaoCaoDoanhThuManagerJDialog(this);
     }//GEN-LAST:event_btnDoanhThuActionPerformed
 
     private void btnTheDinhDanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTheDinhDanhActionPerformed
@@ -264,14 +265,17 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
 
     private void btnPhieuBanHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPhieuBanHangActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnPhieuBanHangActionPerformed
 
     private void btnSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSanPhamActionPerformed
         // TODO add your handling code here:
+        this.showSanPhamManagerJDialog(this);
     }//GEN-LAST:event_btnSanPhamActionPerformed
 
     private void btnUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserActionPerformed
         // TODO add your handling code here:
+        this.showUserManagerJDialog(this);
     }//GEN-LAST:event_btnUserActionPerformed
 
     private void btnLoaiSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoaiSanPhamActionPerformed

@@ -4,10 +4,16 @@
  */
 package poly.fashion.ui;
 
+import poly.fashion.entity.PhieuBanHang;
+import poly.fashion.ui.manager.CrudController;
+
 /**
  *
  * @author Admin
  */
-public interface PhieuBanHangController {
-    
-}
+public interface PhieuBanHangController extends CrudController<PhieuBanHang>{
+
+    void fillBillDetails();
+    void selectTimeRange();
+}    
+
