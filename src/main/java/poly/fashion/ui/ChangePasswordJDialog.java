@@ -4,10 +4,10 @@
  */
 package poly.fashion.ui;
 
-import poly.fashion.dao.UserDAO;
-import poly.fashion.dao.impl.UserDAOImpl;
+import poly.fashion.dao.impl.UsersDAOImpl;
 import poly.fashion.util.XAuth;
 import poly.fashion.util.XDialog;
+import poly.fashion.dao.UsersDAO;
 /**
  *
  * @author Admin
@@ -200,7 +200,7 @@ public class ChangePasswordJDialog extends javax.swing.JDialog implements Change
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
-UserDAO dao = new UserDAOImpl();
+UsersDAO dao = new UsersDAOImpl();
     
 @Override
 public void open() {

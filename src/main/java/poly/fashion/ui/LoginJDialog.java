@@ -4,11 +4,11 @@
  */
 package poly.fashion.ui;
 
-import poly.fashion.entity.User;
+import poly.fashion.entity.Users;
 import poly.fashion.util.XAuth;
 import poly.fashion.util.XDialog;
-import poly.fashion.dao.UserDAO;
-import poly.fashion.dao.impl.UserDAOImpl;
+import poly.fashion.dao.impl.UsersDAOImpl;
+import poly.fashion.dao.UsersDAO;
 
 /**
  *
@@ -22,6 +22,7 @@ public class LoginJDialog extends javax.swing.JDialog implements LoginController
     public LoginJDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+       
 
     }
 
@@ -239,8 +240,8 @@ public void login() {
     String username = txtUsername.getText();
     String password = txtPassword.getText();
 
-    UserDAO dao = new UserDAOImpl();
-    User user = dao.findById(username);
+    UsersDAO dao = new UsersDAOImpl();
+    Users user = dao.findById(username);
     if (user == null) {
         XDialog.alert("Sai tên đăng nhập!");
     } else if (!password.equals(user.getPassword())) {

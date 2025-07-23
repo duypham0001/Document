@@ -4,15 +4,15 @@
  */
 package poly.fashion.util;
 
-import poly.fashion.entity.User;
+import poly.fashion.entity.Users;
 
 public class XAuth {
-    public static User user = User.builder()
+    public static Users user = Users.builder()
             .username("admin")
             .password("123")
             .enabled(true)
             .manager(true)
-            .fullname("Duy Pham")
+            .fullname("Vo Thanh Danh")
             .photo("trump.png")
             .build();
 }

@@ -18,6 +18,7 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
      */
     public PolyFashionJFrame() {
         initComponents();
+        this.init();
     }
     
     /**
@@ -30,10 +31,11 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
+        popupMenu1 = new java.awt.PopupMenu();
         lblPhoto = new javax.swing.JLabel();
         lblFullname = new javax.swing.JLabel();
         pnlLeftBottom = new javax.swing.JPanel();
-        btnSales = new javax.swing.JButton();
+        btnBanHang = new javax.swing.JButton();
         btnLichSu = new javax.swing.JButton();
         btnChangePassword = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
@@ -58,9 +60,16 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        popupMenu1.setLabel("popupMenu1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(255, 255, 255));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         lblPhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPhoto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 51, 51), 1, true));
@@ -75,15 +84,15 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
         pnlLeftBottom.setPreferredSize(new java.awt.Dimension(310, 150));
         pnlLeftBottom.setLayout(new java.awt.GridLayout(0, 2, 5, 5));
 
-        btnSales.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        btnSales.setText("BÁN HÀNG");
-        btnSales.setPreferredSize(new java.awt.Dimension(90, 60));
-        btnSales.addActionListener(new java.awt.event.ActionListener() {
+        btnBanHang.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btnBanHang.setText("BÁN HÀNG");
+        btnBanHang.setPreferredSize(new java.awt.Dimension(90, 60));
+        btnBanHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalesActionPerformed(evt);
+                btnBanHangActionPerformed(evt);
             }
         });
-        pnlLeftBottom.add(btnSales);
+        pnlLeftBottom.add(btnBanHang);
 
         btnLichSu.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         btnLichSu.setText("LỊCH SỬ");
@@ -234,10 +243,10 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalesActionPerformed
+    private void btnBanHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBanHangActionPerformed
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_btnSalesActionPerformed
+    }//GEN-LAST:event_btnBanHangActionPerformed
 
     private void btnLichSuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLichSuActionPerformed
         // TODO add your handling code here:
@@ -265,7 +274,7 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
 
     private void btnPhieuBanHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPhieuBanHangActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_btnPhieuBanHangActionPerformed
 
     private void btnSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSanPhamActionPerformed
@@ -281,6 +290,11 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
     private void btnLoaiSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoaiSanPhamActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLoaiSanPhamActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -318,13 +332,13 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBanHang;
     private javax.swing.JButton btnChangePassword;
     private javax.swing.JButton btnDoanhThu;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLichSu;
     private javax.swing.JButton btnLoaiSanPham;
     private javax.swing.JButton btnPhieuBanHang;
-    private javax.swing.JButton btnSales;
     private javax.swing.JButton btnSanPham;
     private javax.swing.JButton btnTheDinhDanh;
     private javax.swing.JButton btnUser;
@@ -333,17 +347,18 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
     private javax.swing.JLabel lblFullname;
     private javax.swing.JLabel lblPhoto;
     private javax.swing.JPanel pnlLeftBottom;
+    private java.awt.PopupMenu popupMenu1;
     // End of variables declaration//GEN-END:variables
 @Override
 public void init() {
-    this.setIconImage(XIcon.getIcon("trump-small.png").getImage());
+//    this.setIconImage(XIcon.getIcon("trump-small.png").getImage());
     this.setLocationRelativeTo(null);
 
     this.showWelcomeJDialog(this);
     this.showLoginJDialog(this);
 
-    XIcon.setIcon(lblPhoto, "photos/" + XAuth.user.getPhoto());
-    lblFullname.setText(XAuth.user.getFullname());
+//    XIcon.setIcon(lblPhoto, "photos/" + XAuth.user.getPhoto());
+//    lblFullname.setText(XAuth.user.getFullname());
 
 
     }

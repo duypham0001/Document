@@ -23,4 +23,11 @@
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>poly.fashion.PolyFashion</exec.mainClass>
     </properties>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+        </resources>
+    </build>
 </project>
