@@ -12,7 +12,7 @@ public class XAuth {
             .password("123")
             .enabled(true)
             .manager(true)
-            .fullname("Vo Thanh Danh")
+            .fullname("Duy Pham")
             .photo("trump.png")
             .build();
 }

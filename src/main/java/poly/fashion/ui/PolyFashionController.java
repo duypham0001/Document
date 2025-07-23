@@ -33,11 +33,11 @@ default void showJDialog(JDialog dialog){
 dialog.setLocationRelativeTo(null);
 dialog.setVisible(true);
 }
-default void showWelcomeJDialog(JFrame frame){
-this.showJDialog(new WelcomeJDialog(frame, true));
+    default void showWelcomeJDialog(JFrame frame){
+        this.showJDialog(new WelcomeJDialog(frame, true));
 }
-default void showLoginJDialog(JFrame frame){
-this.showJDialog(new LoginJDialog(frame, true));
+    default void showLoginJDialog(JFrame frame){
+        this.showJDialog(new LoginJDialog(frame, true));
 }
 default void showChangePasswordJDialog(JFrame frame){
 this.showJDialog(new ChangePasswordJDialog(frame, true));

@@ -68,7 +68,7 @@ public final class PolyFashionJFrame extends javax.swing.JFrame implements PolyF
         lblFullname.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         lblFullname.setForeground(new java.awt.Color(255, 51, 0));
         lblFullname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFullname.setText("Võ Thành Danh");
+        lblFullname.setText("Duy Pham");
 
         pnlLeftBottom.setBackground(new java.awt.Color(255, 255, 255));
         pnlLeftBottom.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));

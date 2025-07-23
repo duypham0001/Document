@@ -110,7 +110,7 @@
           <Color blue="0" green="33" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="V&#xf5; Th&#xe0;nh Danh"/>
+        <Property name="text" type="java.lang.String" value="Duy Pham"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="pnlLeftBottom">

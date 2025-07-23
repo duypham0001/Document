@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package poly.fashion.ui.manager;
+package poly.fashion.ui;
 
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
@@ -77,9 +77,10 @@ public class PhieuBanHangJDialog extends javax.swing.JDialog {
         jLabel4 = new javax.swing.JLabel();
         txtCheckin = new javax.swing.JTextField();
         txtCheckout = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
+        rdoStatus = new poly.cafe.ui.component.RadioJPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblBillDetails = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
@@ -285,16 +286,24 @@ public class PhieuBanHangJDialog extends javax.swing.JDialog {
         txtCheckout.setEditable(false);
         jPanel6.add(txtCheckout);
 
-        jLabel5.setText("Trạng thái");
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel6.add(jLabel5);
-
         jLabel6.setText("Người tạo");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPanel6.add(jLabel6);
 
+        jLabel5.setText("Trạng thái");
+        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanel6.add(jLabel5);
+
         txtUsername.setEditable(false);
+        txtUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsernameActionPerformed(evt);
+            }
+        });
         jPanel6.add(txtUsername);
+
+        rdoStatus.setItems(new String[] {"Servicing", "Completed", "Cancelled"});
+        jPanel6.add(rdoStatus);
 
         tblBillDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -439,6 +448,10 @@ public class PhieuBanHangJDialog extends javax.swing.JDialog {
         //this.moveLast();
     }//GEN-LAST:event_btnMoveLastActionPerformed
 
+    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsernameActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -518,6 +531,7 @@ public class PhieuBanHangJDialog extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private poly.cafe.ui.component.RadioJPanel rdoStatus;
     private javax.swing.JTabbedPane tabs;
     private javax.swing.JTable tblBillDetails;
     private javax.swing.JTable tblBills;
